@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E297B9827B6344300ACA855 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E297B9727B6344300ACA855 /* main.c */; };
+		6E46E17A27CD29B5000F94D2 /* reWrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E46E17927CD29B5000F94D2 /* reWrite.c */; };
+		6E46E17D27CDF0F0000F94D2 /* modifyCityName.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E46E17C27CDF0F0000F94D2 /* modifyCityName.c */; };
+		6E46E18027CE0B09000F94D2 /* deleteTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E46E17F27CE0B09000F94D2 /* deleteTrainMap.c */; };
+		6E51FC8727BF5FD60095842D /* checkCityList.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E51FC8627BF5FD60095842D /* checkCityList.c */; };
+		6E51FC8A27BF6BE60095842D /* checkTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E51FC8927BF6BE60095842D /* checkTrainMap.c */; };
+		6E51FC8D27BF95A60095842D /* addTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E51FC8C27BF95A60095842D /* addTrainMap.c */; };
+		6E51FC9327C119FC0095842D /* howManyLines.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E51FC9227C119FC0095842D /* howManyLines.c */; };
+		6E5CE2C527D5E15900E7A2D7 /* minimumOfTransits.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2C427D5E15900E7A2D7 /* minimumOfTransits.c */; };
+		6E5CE2C827D5E16900E7A2D7 /* lessFee.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2C727D5E16900E7A2D7 /* lessFee.c */; };
+		6E5CE2CB27D5E17E00E7A2D7 /* lessTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */; };
+		6EDF0E9127CFB3D9004A6177 /* deleteCity.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9027CFB3D9004A6177 /* deleteCity.c */; };
+		6EDF0E9427D08EE3004A6177 /* modifyTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9327D08EE3004A6177 /* modifyTrainMap.c */; };
+		6EDF0E9727D09D81004A6177 /* changeStartTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9627D09D81004A6177 /* changeStartTime.c */; };
+		6EDF0E9D27D1071F004A6177 /* changeEndTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9C27D1071F004A6177 /* changeEndTime.c */; };
+		6EDF0EA027D1086A004A6177 /* changePay.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9F27D1086A004A6177 /* changePay.c */; };
+		6EE9544927B896F40041E8BD /* displayMenu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9544827B896F40041E8BD /* displayMenu.c */; };
+		6EE9544E27B8B9D40041E8BD /* addCity.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9544D27B8B9D30041E8BD /* addCity.c */; };
+		6EE9546427B8DD690041E8BD /* taskCompleted.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9546327B8DD690041E8BD /* taskCompleted.c */; };
+		6EE9546727B8E1000041E8BD /* showContents.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9546627B8E1000041E8BD /* showContents.c */; };
+		6EE9546A27BAABAD0041E8BD /* displayUsersMenu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9546927BAABAD0041E8BD /* displayUsersMenu.c */; };
+		6EE9547127BAAE150041E8BD /* displayAdministratorMenu.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9547027BAAE150041E8BD /* displayAdministratorMenu.c */; };
+		6EE9547627BB94810041E8BD /* showAdministratorContents.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9547527BB94810041E8BD /* showAdministratorContents.c */; };
+		6EE9547927BBA0830041E8BD /* showUsersContents.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9547827BBA0830041E8BD /* showUsersContents.c */; };
+		6EE9547D27BBECE90041E8BD /* Password.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9547C27BBECE90041E8BD /* Password.c */; };
+		6EE9548127BBFCE60041E8BD /* createGraph.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EE9548027BBFCE60041E8BD /* createGraph.c */; };
+		6EF5EE2027C26D8300F9E157 /* howLong.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EF5EE1F27C26D8300F9E157 /* howLong.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E297B9227B6344300ACA855 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6E297B9427B6344300ACA855 /* theBestWayForDestination */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = theBestWayForDestination; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E297B9727B6344300ACA855 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6E46E17827CD29B5000F94D2 /* reWrite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reWrite.h; sourceTree = "<group>"; };
+		6E46E17927CD29B5000F94D2 /* reWrite.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reWrite.c; sourceTree = "<group>"; };
+		6E46E17B27CDF0F0000F94D2 /* modifyCityName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modifyCityName.h; sourceTree = "<group>"; };
+		6E46E17C27CDF0F0000F94D2 /* modifyCityName.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = modifyCityName.c; sourceTree = "<group>"; };
+		6E46E17E27CE0B09000F94D2 /* deleteTrainMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deleteTrainMap.h; sourceTree = "<group>"; };
+		6E46E17F27CE0B09000F94D2 /* deleteTrainMap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deleteTrainMap.c; sourceTree = "<group>"; };
+		6E51FC8527BF5FD60095842D /* checkCityList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkCityList.h; sourceTree = "<group>"; };
+		6E51FC8627BF5FD60095842D /* checkCityList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checkCityList.c; sourceTree = "<group>"; };
+		6E51FC8827BF6BE60095842D /* checkTrainMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = checkTrainMap.h; sourceTree = "<group>"; };
+		6E51FC8927BF6BE60095842D /* checkTrainMap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = checkTrainMap.c; sourceTree = "<group>"; };
+		6E51FC8B27BF95A60095842D /* addTrainMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addTrainMap.h; sourceTree = "<group>"; };
+		6E51FC8C27BF95A60095842D /* addTrainMap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = addTrainMap.c; sourceTree = "<group>"; };
+		6E51FC9127C119FC0095842D /* howManyLines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = howManyLines.h; sourceTree = "<group>"; };
+		6E51FC9227C119FC0095842D /* howManyLines.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = howManyLines.c; sourceTree = "<group>"; };
+		6E5CE2C327D5E15900E7A2D7 /* minimumOfTransits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minimumOfTransits.h; sourceTree = "<group>"; };
+		6E5CE2C427D5E15900E7A2D7 /* minimumOfTransits.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minimumOfTransits.c; sourceTree = "<group>"; };
+		6E5CE2C627D5E16900E7A2D7 /* lessFee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lessFee.h; sourceTree = "<group>"; };
+		6E5CE2C727D5E16900E7A2D7 /* lessFee.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lessFee.c; sourceTree = "<group>"; };
+		6E5CE2C927D5E17E00E7A2D7 /* lessTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lessTime.h; sourceTree = "<group>"; };
+		6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lessTime.c; sourceTree = "<group>"; };
+		6EDF0E8F27CFB3D9004A6177 /* deleteCity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deleteCity.h; sourceTree = "<group>"; };
+		6EDF0E9027CFB3D9004A6177 /* deleteCity.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deleteCity.c; sourceTree = "<group>"; };
+		6EDF0E9227D08EE3004A6177 /* modifyTrainMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modifyTrainMap.h; sourceTree = "<group>"; };
+		6EDF0E9327D08EE3004A6177 /* modifyTrainMap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = modifyTrainMap.c; sourceTree = "<group>"; };
+		6EDF0E9527D09D81004A6177 /* changeStartTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = changeStartTime.h; sourceTree = "<group>"; };
+		6EDF0E9627D09D81004A6177 /* changeStartTime.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = changeStartTime.c; sourceTree = "<group>"; };
+		6EDF0E9B27D1071F004A6177 /* changeEndTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = changeEndTime.h; sourceTree = "<group>"; };
+		6EDF0E9C27D1071F004A6177 /* changeEndTime.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = changeEndTime.c; sourceTree = "<group>"; };
+		6EDF0E9E27D1086A004A6177 /* changePay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = changePay.h; sourceTree = "<group>"; };
+		6EDF0E9F27D1086A004A6177 /* changePay.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = changePay.c; sourceTree = "<group>"; };
+		6EE9544727B896F40041E8BD /* displayMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = displayMenu.h; sourceTree = "<group>"; };
+		6EE9544827B896F40041E8BD /* displayMenu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = displayMenu.c; sourceTree = "<group>"; };
+		6EE9544C27B8B9D30041E8BD /* addCity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addCity.h; sourceTree = "<group>"; };
+		6EE9544D27B8B9D30041E8BD /* addCity.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = addCity.c; sourceTree = "<group>"; };
+		6EE9546227B8DD690041E8BD /* taskCompleted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = taskCompleted.h; sourceTree = "<group>"; };
+		6EE9546327B8DD690041E8BD /* taskCompleted.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = taskCompleted.c; sourceTree = "<group>"; };
+		6EE9546527B8E1000041E8BD /* showContents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showContents.h; sourceTree = "<group>"; };
+		6EE9546627B8E1000041E8BD /* showContents.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = showContents.c; sourceTree = "<group>"; };
+		6EE9546827BAABAD0041E8BD /* displayUsersMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = displayUsersMenu.h; sourceTree = "<group>"; };
+		6EE9546927BAABAD0041E8BD /* displayUsersMenu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = displayUsersMenu.c; sourceTree = "<group>"; };
+		6EE9546F27BAAE150041E8BD /* displayAdministratorMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = displayAdministratorMenu.h; sourceTree = "<group>"; };
+		6EE9547027BAAE150041E8BD /* displayAdministratorMenu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = displayAdministratorMenu.c; sourceTree = "<group>"; };
+		6EE9547427BB94810041E8BD /* showAdministratorContents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showAdministratorContents.h; sourceTree = "<group>"; };
+		6EE9547527BB94810041E8BD /* showAdministratorContents.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = showAdministratorContents.c; sourceTree = "<group>"; };
+		6EE9547727BBA0830041E8BD /* showUsersContents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = showUsersContents.h; sourceTree = "<group>"; };
+		6EE9547827BBA0830041E8BD /* showUsersContents.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = showUsersContents.c; sourceTree = "<group>"; };
+		6EE9547B27BBECE90041E8BD /* Password.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Password.h; sourceTree = "<group>"; };
+		6EE9547C27BBECE90041E8BD /* Password.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Password.c; sourceTree = "<group>"; };
+		6EE9547F27BBFCE60041E8BD /* createGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = createGraph.h; sourceTree = "<group>"; };
+		6EE9548027BBFCE60041E8BD /* createGraph.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = createGraph.c; sourceTree = "<group>"; };
+		6EF5EE1E27C26D8300F9E157 /* howLong.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = howLong.h; sourceTree = "<group>"; };
+		6EF5EE1F27C26D8300F9E157 /* howLong.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = howLong.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E297B9127B6344300ACA855 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E297B8B27B6344300ACA855 = {
+			isa = PBXGroup;
+			children = (
+				6E297B9627B6344300ACA855 /* theBestWayForDestination */,
+				6E297B9527B6344300ACA855 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6E297B9527B6344300ACA855 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E297B9427B6344300ACA855 /* theBestWayForDestination */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E297B9627B6344300ACA855 /* theBestWayForDestination */ = {
+			isa = PBXGroup;
+			children = (
+				6E297B9727B6344300ACA855 /* main.c */,
+				6EE9546C27BAAD040041E8BD /* DisplayMenu */,
+				6EE9547327BAAE7A0041E8BD /* Administrator */,
+				6E66808E27D27A1F00DAEAEA /* Users */,
+				6EE9547E27BBFC720041E8BD /* Graph */,
+				6EE9547227BAAE5E0041E8BD /* Others */,
+			);
+			path = theBestWayForDestination;
+			sourceTree = "<group>";
+		};
+		6E66808E27D27A1F00DAEAEA /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				6E51FC8527BF5FD60095842D /* checkCityList.h */,
+				6E51FC8627BF5FD60095842D /* checkCityList.c */,
+				6E51FC8827BF6BE60095842D /* checkTrainMap.h */,
+				6E51FC8927BF6BE60095842D /* checkTrainMap.c */,
+				6E5CE2C327D5E15900E7A2D7 /* minimumOfTransits.h */,
+				6E5CE2C427D5E15900E7A2D7 /* minimumOfTransits.c */,
+				6E5CE2C627D5E16900E7A2D7 /* lessFee.h */,
+				6E5CE2C727D5E16900E7A2D7 /* lessFee.c */,
+				6E5CE2C927D5E17E00E7A2D7 /* lessTime.h */,
+				6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		6EE9546C27BAAD040041E8BD /* DisplayMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9546527B8E1000041E8BD /* showContents.h */,
+				6EE9546627B8E1000041E8BD /* showContents.c */,
+				6EE9544727B896F40041E8BD /* displayMenu.h */,
+				6EE9544827B896F40041E8BD /* displayMenu.c */,
+				6EE9546E27BAAD9D0041E8BD /* AdministratorMenu */,
+				6EE9546D27BAAD360041E8BD /* UsersMenu */,
+			);
+			path = DisplayMenu;
+			sourceTree = "<group>";
+		};
+		6EE9546D27BAAD360041E8BD /* UsersMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9547727BBA0830041E8BD /* showUsersContents.h */,
+				6EE9547827BBA0830041E8BD /* showUsersContents.c */,
+				6EE9546827BAABAD0041E8BD /* displayUsersMenu.h */,
+				6EE9546927BAABAD0041E8BD /* displayUsersMenu.c */,
+			);
+			path = UsersMenu;
+			sourceTree = "<group>";
+		};
+		6EE9546E27BAAD9D0041E8BD /* AdministratorMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9547A27BBECCF0041E8BD /* Password */,
+				6EE9547427BB94810041E8BD /* showAdministratorContents.h */,
+				6EE9547527BB94810041E8BD /* showAdministratorContents.c */,
+				6EE9546F27BAAE150041E8BD /* displayAdministratorMenu.h */,
+				6EE9547027BAAE150041E8BD /* displayAdministratorMenu.c */,
+			);
+			path = AdministratorMenu;
+			sourceTree = "<group>";
+		};
+		6EE9547227BAAE5E0041E8BD /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9546227B8DD690041E8BD /* taskCompleted.h */,
+				6EE9546327B8DD690041E8BD /* taskCompleted.c */,
+				6E51FC9127C119FC0095842D /* howManyLines.h */,
+				6E51FC9227C119FC0095842D /* howManyLines.c */,
+				6EF5EE1E27C26D8300F9E157 /* howLong.h */,
+				6EF5EE1F27C26D8300F9E157 /* howLong.c */,
+				6E46E17827CD29B5000F94D2 /* reWrite.h */,
+				6E46E17927CD29B5000F94D2 /* reWrite.c */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		6EE9547327BAAE7A0041E8BD /* Administrator */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9544C27B8B9D30041E8BD /* addCity.h */,
+				6EE9544D27B8B9D30041E8BD /* addCity.c */,
+				6E46E17B27CDF0F0000F94D2 /* modifyCityName.h */,
+				6E46E17C27CDF0F0000F94D2 /* modifyCityName.c */,
+				6E46E17E27CE0B09000F94D2 /* deleteTrainMap.h */,
+				6E46E17F27CE0B09000F94D2 /* deleteTrainMap.c */,
+				6EDF0E8F27CFB3D9004A6177 /* deleteCity.h */,
+				6EDF0E9027CFB3D9004A6177 /* deleteCity.c */,
+				6EDF0E9227D08EE3004A6177 /* modifyTrainMap.h */,
+				6EDF0E9327D08EE3004A6177 /* modifyTrainMap.c */,
+				6EDF0E9527D09D81004A6177 /* changeStartTime.h */,
+				6EDF0E9627D09D81004A6177 /* changeStartTime.c */,
+				6EDF0E9B27D1071F004A6177 /* changeEndTime.h */,
+				6EDF0E9C27D1071F004A6177 /* changeEndTime.c */,
+				6EDF0E9E27D1086A004A6177 /* changePay.h */,
+				6EDF0E9F27D1086A004A6177 /* changePay.c */,
+				6E51FC8B27BF95A60095842D /* addTrainMap.h */,
+				6E51FC8C27BF95A60095842D /* addTrainMap.c */,
+			);
+			path = Administrator;
+			sourceTree = "<group>";
+		};
+		6EE9547A27BBECCF0041E8BD /* Password */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9547B27BBECE90041E8BD /* Password.h */,
+				6EE9547C27BBECE90041E8BD /* Password.c */,
+			);
+			path = Password;
+			sourceTree = "<group>";
+		};
+		6EE9547E27BBFC720041E8BD /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				6EE9547F27BBFCE60041E8BD /* createGraph.h */,
+				6EE9548027BBFCE60041E8BD /* createGraph.c */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E297B9327B6344300ACA855 /* theBestWayForDestination */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E297B9B27B6344300ACA855 /* Build configuration list for PBXNativeTarget "theBestWayForDestination" */;
+			buildPhases = (
+				6E297B9027B6344300ACA855 /* Sources */,
+				6E297B9127B6344300ACA855 /* Frameworks */,
+				6E297B9227B6344300ACA855 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = theBestWayForDestination;
+			productName = theBestWayForDestination;
+			productReference = 6E297B9427B6344300ACA855 /* theBestWayForDestination */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E297B8C27B6344300ACA855 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					6E297B9327B6344300ACA855 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 6E297B8F27B6344300ACA855 /* Build configuration list for PBXProject "theBestWayForDestination" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E297B8B27B6344300ACA855;
+			productRefGroup = 6E297B9527B6344300ACA855 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E297B9327B6344300ACA855 /* theBestWayForDestination */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E297B9027B6344300ACA855 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EE9546427B8DD690041E8BD /* taskCompleted.c in Sources */,
+				6E297B9827B6344300ACA855 /* main.c in Sources */,
+				6E51FC8A27BF6BE60095842D /* checkTrainMap.c in Sources */,
+				6EE9544927B896F40041E8BD /* displayMenu.c in Sources */,
+				6EDF0E9D27D1071F004A6177 /* changeEndTime.c in Sources */,
+				6E51FC8727BF5FD60095842D /* checkCityList.c in Sources */,
+				6EE9546727B8E1000041E8BD /* showContents.c in Sources */,
+				6EE9548127BBFCE60041E8BD /* createGraph.c in Sources */,
+				6E46E17A27CD29B5000F94D2 /* reWrite.c in Sources */,
+				6EE9547627BB94810041E8BD /* showAdministratorContents.c in Sources */,
+				6EDF0E9727D09D81004A6177 /* changeStartTime.c in Sources */,
+				6EE9546A27BAABAD0041E8BD /* displayUsersMenu.c in Sources */,
+				6E5CE2C527D5E15900E7A2D7 /* minimumOfTransits.c in Sources */,
+				6E5CE2CB27D5E17E00E7A2D7 /* lessTime.c in Sources */,
+				6EDF0EA027D1086A004A6177 /* changePay.c in Sources */,
+				6EE9547927BBA0830041E8BD /* showUsersContents.c in Sources */,
+				6E46E18027CE0B09000F94D2 /* deleteTrainMap.c in Sources */,
+				6EDF0E9427D08EE3004A6177 /* modifyTrainMap.c in Sources */,
+				6EE9544E27B8B9D40041E8BD /* addCity.c in Sources */,
+				6EDF0E9127CFB3D9004A6177 /* deleteCity.c in Sources */,
+				6E51FC8D27BF95A60095842D /* addTrainMap.c in Sources */,
+				6E51FC9327C119FC0095842D /* howManyLines.c in Sources */,
+				6E5CE2C827D5E16900E7A2D7 /* lessFee.c in Sources */,
+				6EF5EE2027C26D8300F9E157 /* howLong.c in Sources */,
+				6EE9547D27BBECE90041E8BD /* Password.c in Sources */,
+				6EE9547127BAAE150041E8BD /* displayAdministratorMenu.c in Sources */,
+				6E46E17D27CDF0F0000F94D2 /* modifyCityName.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6E297B9927B6344300ACA855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6E297B9A27B6344300ACA855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6E297B9C27B6344300ACA855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WB6V54G2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6E297B9D27B6344300ACA855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2WB6V54G2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E297B8F27B6344300ACA855 /* Build configuration list for PBXProject "theBestWayForDestination" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E297B9927B6344300ACA855 /* Debug */,
+				6E297B9A27B6344300ACA855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E297B9B27B6344300ACA855 /* Build configuration list for PBXNativeTarget "theBestWayForDestination" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E297B9C27B6344300ACA855 /* Debug */,
+				6E297B9D27B6344300ACA855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E297B8C27B6344300ACA855 /* Project object */;
+}
