@@ -18,6 +18,7 @@
 		6E5CE2C527D5E15900E7A2D7 /* minimumOfTransits.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2C427D5E15900E7A2D7 /* minimumOfTransits.c */; };
 		6E5CE2C827D5E16900E7A2D7 /* lessFee.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2C727D5E16900E7A2D7 /* lessFee.c */; };
 		6E5CE2CB27D5E17E00E7A2D7 /* lessTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */; };
+		6EDC9B6D27D7A2750023F267 /* isReasonable.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDC9B6C27D7A2750023F267 /* isReasonable.c */; };
 		6EDF0E9127CFB3D9004A6177 /* deleteCity.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9027CFB3D9004A6177 /* deleteCity.c */; };
 		6EDF0E9427D08EE3004A6177 /* modifyTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9327D08EE3004A6177 /* modifyTrainMap.c */; };
 		6EDF0E9727D09D81004A6177 /* changeStartTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9627D09D81004A6177 /* changeStartTime.c */; };
@@ -71,6 +72,8 @@
 		6E5CE2C727D5E16900E7A2D7 /* lessFee.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lessFee.c; sourceTree = "<group>"; };
 		6E5CE2C927D5E17E00E7A2D7 /* lessTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lessTime.h; sourceTree = "<group>"; };
 		6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lessTime.c; sourceTree = "<group>"; };
+		6EDC9B6B27D7A2750023F267 /* isReasonable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = isReasonable.h; sourceTree = "<group>"; };
+		6EDC9B6C27D7A2750023F267 /* isReasonable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = isReasonable.c; sourceTree = "<group>"; };
 		6EDF0E8F27CFB3D9004A6177 /* deleteCity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deleteCity.h; sourceTree = "<group>"; };
 		6EDF0E9027CFB3D9004A6177 /* deleteCity.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deleteCity.c; sourceTree = "<group>"; };
 		6EDF0E9227D08EE3004A6177 /* modifyTrainMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modifyTrainMap.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				6EF5EE1F27C26D8300F9E157 /* howLong.c */,
 				6E46E17827CD29B5000F94D2 /* reWrite.h */,
 				6E46E17927CD29B5000F94D2 /* reWrite.c */,
+				6EDC9B6B27D7A2750023F267 /* isReasonable.h */,
+				6EDC9B6C27D7A2750023F267 /* isReasonable.c */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				6EE9547D27BBECE90041E8BD /* Password.c in Sources */,
 				6EE9547127BAAE150041E8BD /* displayAdministratorMenu.c in Sources */,
 				6E46E17D27CDF0F0000F94D2 /* modifyCityName.c in Sources */,
+				6EDC9B6D27D7A2750023F267 /* isReasonable.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
