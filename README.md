@@ -12,4 +12,5 @@ macOS Monterey 12.2.1 or later
 
 ## Acknowledgement
 
-This is my first time uploading my project on GitHub.  I want to express my sincere gratitude to my friends❤️
+This is my first time uploading my project on GitHub.  
+I want to express my sincere gratitude to my friends❤️
