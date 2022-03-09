@@ -212,7 +212,9 @@ void minimumOfTransits(Graph* g){
         }
         r=h;
         //现在是把城市下标链表转换成线路表并且存储到最终文件里
+        int cityNumArray[allCity];
         for (int s=1; s<allCity; s++) {
+            cityNumArray[s-1]=r->se;
             fputs(g->arrays[r->se].data, f3);
             fputs("-->", f3);
             r=r->next;
@@ -228,21 +230,68 @@ void minimumOfTransits(Graph* g){
             }
         }
         fputs(time, f3);
-        
+        fputs("\n中转城市为：", f3);
+        if (theMini==0) {
+            fputs("无需中转城市！\n乘坐路线为：", f3);
+            char lineInfo[20];
+            e=g->arrays[r->se].edge;
+            for ( ; e!=NULL; e=e->link) {
+                if (e->adjvex==r->next->se) {
+                    strcpy(lineInfo, e->info.transportation);
+                }
+            }
+            fputs(lineInfo, f3);
+        }
+        else{
+           
+            //现在来处理火车线路
+            fputs("\n依次换乘的路线与城市为：", f3);
+//            int transCityNum[40];  //transcitynum
+//            int ini=0;
+            for(int kun=1; kun<allCity-1; kun++){
+                char t1[20];
+                char t2[20];
+                int a=cityNumArray[kun-1];
+                int b=cityNumArray[kun];
+                int c=cityNumArray[kun+1];
+                for (EdgeNode* e=g->arrays[b].edge; e!=NULL; e=e->link) {
+                    if (e->adjvex==c) {
+                        strcpy(t2, e->info.transportation);
+                    }
+                }
+                for (EdgeNode* e=g->arrays[a].edge; e!=NULL; e=e->link) {
+                    if (e->adjvex==b) {
+                        strcpy(t1, e->info.transportation);
+                    }
+                }
+                if (strcmp(t1, t2)) {
+//                    transCityNum[ini]=b;
+//                    ini++;
+                    fputs(t1, f3);
+                    fputs("---", f3);
+                    fputs(g->arrays[b].data, f3);
+                    fputs("---", f3);
+                }
+                if (kun==allCity-2) {
+                    fputs(t2, f3);
+                }
+            }
+        }
         
         fputs("\n", f3);
         fclose(f4);
     }
     fputs("\n", f3);
     fclose(f3);
-    fputs("    中转城市为：", f3);
+    
+    
     
     printf("\n");
     for (int i=0; i<22; i++) {
         printf("*  ");
     }
-    printf("*\n");
-    printf("线路已保存至：“theBestWayForDestination/theBestWayForDestination/Routes/routes.txt”\n按Enter键以返回...");
+    printf("*\n\n\n");
+    printf("线路已保存至：“theBestWayForDestination/theBestWayForDestination/Routes/routes.txt”。\n\n按Enter键以返回...");
     //deleteTempFile
     remove("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt");
     getchar();
