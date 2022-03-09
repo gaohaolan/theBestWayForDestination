@@ -16,7 +16,7 @@ typedef struct isRea{
     char end[20];
     char line[20];
     struct isRea* next;
-};
+}isRea;
 
-int isReasonable(int c, int b, int a);
+int isReasonable(Graph* g, int c, int b, int a);
 #endif /* isReasonable_h */

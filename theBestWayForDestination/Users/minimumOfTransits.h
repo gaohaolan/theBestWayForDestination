@@ -15,7 +15,7 @@ typedef struct NumN{
     struct NumN* next;
 }NumN;
 
-void dfs1(Graph* g, int startc, int endc, int visited[], char path[], int cnt);
+void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt);
 void findAllPath(Graph* g, char start[], char end[]);
 void minimumOfTransits(Graph* g);
 #endif /* minimumOfTransits_h */

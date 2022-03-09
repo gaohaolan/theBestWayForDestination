@@ -11,35 +11,65 @@
 #include "isReasonable.h"
 #define MAXT 1024
 
-void dfs1(Graph* g, int startc, int endc, int visited[], char path[], int cnt)
+void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
 {
     int v=startc;
     int f=endc;
+    if (cnt>=2) {
+        if (isReasonable(g, v, path[cnt-1], path[cnt-2])) {
+            visited[v] = 1;
+            path[cnt++] = v;
+            if(v == f)
+            {
+                for(int i = 0; i <cnt; i++)
+                {
+                    
+                    printf("%d",path[i]);
+                    printf("站 ");
+                }
+                printf("\n");
+                //return;
+            }
+         
+            for(EdgeNode* e = g->arrays[v].edge; e!=NULL; e = e->link)
+            {
+                if(!visited[e->adjvex])
+                {
+                    dfs1(g, e->adjvex, endc, visited, path, cnt);
+                                 
+                }
+            }
+            visited[v]=0;               //回溯法
+            cnt--;                  //易错！
+        }
+    }
     
-    visited[v] = 1;
-    path[cnt++] = v;
-    if(v == f)
-    {
-        for(int i = 0; i <cnt; i++)
+    else{
+        visited[v] = 1;
+        path[cnt++] = v;
+        if(v == f)
         {
-            
-            printf("%d",path[i]);
-            printf("站 ");
+            for(int i = 0; i <cnt; i++)
+            {
+                
+                printf("%d",path[i]);
+                printf("站 ");
+            }
+            printf("\n");
+            //return;
         }
-        printf("\n");
-        //return;
-    }
- 
-    for(EdgeNode* e = g->arrays[v].edge; e!=NULL; e = e->link)
-    {
-        if(!visited[e->adjvex])
+     
+        for(EdgeNode* e = g->arrays[v].edge; e!=NULL; e = e->link)
         {
-            dfs1(g, e->adjvex, endc, visited, path, cnt);
-                         
+            if(!visited[e->adjvex])
+            {
+                dfs1(g, e->adjvex, endc, visited, path, cnt);
+                             
+            }
         }
+        visited[v]=0;               //回溯法
+        cnt--;                  //易错！
     }
-    visited[v]=0;               //回溯法
-    cnt--;                  //易错！
 }
  
 
@@ -58,7 +88,7 @@ void findAllPath(Graph* g, char start[], char end[])
         {
             visited[i]=0;
         }   //初始化数组visited的元素值为0，表示均未访问
-        char path[MAXT];
+        int path[MAXT];
         dfs1(g, startc, endc, visited, path, 0);
     }
  
