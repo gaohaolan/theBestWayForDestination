@@ -2,9 +2,10 @@
 
 Curriculum Design (Data Structures)
 
-## Requirement
+## Requirements
 
-macOS Monterey 12.2.1 or later
+macOS Monterey 12.2.1 or later  
+Xcode 13.2.1 (13C100) or later
 
 ## Maintainer
 

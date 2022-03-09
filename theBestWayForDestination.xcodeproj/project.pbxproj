@@ -19,6 +19,8 @@
 		6E5CE2C827D5E16900E7A2D7 /* lessFee.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2C727D5E16900E7A2D7 /* lessFee.c */; };
 		6E5CE2CB27D5E17E00E7A2D7 /* lessTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */; };
 		6EDC9B6D27D7A2750023F267 /* isReasonable.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDC9B6C27D7A2750023F267 /* isReasonable.c */; };
+		6EDC9B7027D86C300023F267 /* compareTrans.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDC9B6F27D86C300023F267 /* compareTrans.c */; };
+		6EDC9B7327D8751C0023F267 /* theMiniTrans.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDC9B7227D8751C0023F267 /* theMiniTrans.c */; };
 		6EDF0E9127CFB3D9004A6177 /* deleteCity.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9027CFB3D9004A6177 /* deleteCity.c */; };
 		6EDF0E9427D08EE3004A6177 /* modifyTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9327D08EE3004A6177 /* modifyTrainMap.c */; };
 		6EDF0E9727D09D81004A6177 /* changeStartTime.c in Sources */ = {isa = PBXBuildFile; fileRef = 6EDF0E9627D09D81004A6177 /* changeStartTime.c */; };
@@ -74,6 +76,10 @@
 		6E5CE2CA27D5E17E00E7A2D7 /* lessTime.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = lessTime.c; sourceTree = "<group>"; };
 		6EDC9B6B27D7A2750023F267 /* isReasonable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = isReasonable.h; sourceTree = "<group>"; };
 		6EDC9B6C27D7A2750023F267 /* isReasonable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = isReasonable.c; sourceTree = "<group>"; };
+		6EDC9B6E27D86C300023F267 /* compareTrans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compareTrans.h; sourceTree = "<group>"; };
+		6EDC9B6F27D86C300023F267 /* compareTrans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = compareTrans.c; sourceTree = "<group>"; };
+		6EDC9B7127D8751C0023F267 /* theMiniTrans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = theMiniTrans.h; sourceTree = "<group>"; };
+		6EDC9B7227D8751C0023F267 /* theMiniTrans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = theMiniTrans.c; sourceTree = "<group>"; };
 		6EDF0E8F27CFB3D9004A6177 /* deleteCity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = deleteCity.h; sourceTree = "<group>"; };
 		6EDF0E9027CFB3D9004A6177 /* deleteCity.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = deleteCity.c; sourceTree = "<group>"; };
 		6EDF0E9227D08EE3004A6177 /* modifyTrainMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modifyTrainMap.h; sourceTree = "<group>"; };
@@ -214,6 +220,10 @@
 				6E46E17927CD29B5000F94D2 /* reWrite.c */,
 				6EDC9B6B27D7A2750023F267 /* isReasonable.h */,
 				6EDC9B6C27D7A2750023F267 /* isReasonable.c */,
+				6EDC9B6E27D86C300023F267 /* compareTrans.h */,
+				6EDC9B6F27D86C300023F267 /* compareTrans.c */,
+				6EDC9B7127D8751C0023F267 /* theMiniTrans.h */,
+				6EDC9B7227D8751C0023F267 /* theMiniTrans.c */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -319,7 +329,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EE9546427B8DD690041E8BD /* taskCompleted.c in Sources */,
+				6EDC9B7027D86C300023F267 /* compareTrans.c in Sources */,
 				6E297B9827B6344300ACA855 /* main.c in Sources */,
+				6EDC9B7327D8751C0023F267 /* theMiniTrans.c in Sources */,
 				6E51FC8A27BF6BE60095842D /* checkTrainMap.c in Sources */,
 				6EE9544927B896F40041E8BD /* displayMenu.c in Sources */,
 				6EDF0E9D27D1071F004A6177 /* changeEndTime.c in Sources */,

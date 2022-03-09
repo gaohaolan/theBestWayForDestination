@@ -14,6 +14,7 @@
 int main(int argc, const char * argv[])
 {
     //初始化，将已经预置的城市 建图。
+    remove("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Routes/routes.txt");
     Graph* g;
     g=createGraph();
     //显示选单与操作。

@@ -9,6 +9,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "isReasonable.h"
+#include "compareTrans.h"
+#include "theMiniTrans.h"
 #define MAXT 1024
 
 void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
@@ -21,13 +23,18 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
             path[cnt++] = v;
             if(v == f)
             {
+                FILE* f1=fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "a");
                 for(int i = 0; i <cnt; i++)
                 {
+                    fprintf(f1, "%d",path[i]);
+                    fputs(" ", f1);
+                    //printf("%d",path[i]);
+                    //printf("站 ");
                     
-                    printf("%d",path[i]);
-                    printf("站 ");
                 }
-                printf("\n");
+                //printf("\n");
+                fputs("\n", f1);
+                fclose(f1);
                 //return;
             }
          
@@ -49,13 +56,17 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
         path[cnt++] = v;
         if(v == f)
         {
+            FILE* f2=fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "a");
             for(int i = 0; i <cnt; i++)
             {
-                
-                printf("%d",path[i]);
-                printf("站 ");
+                fprintf(f2, "%d",path[i]);
+                fputs(" ", f2);
+                //printf("%d",path[i]);
+                //printf("站 ");
             }
-            printf("\n");
+            //printf("\n");
+            fputs("\n", f2);
+            fclose(f2);
             //return;
         }
      
@@ -80,7 +91,7 @@ void findAllPath(Graph* g, char start[], char end[])
     int endc=findadj(end, g);
     
     if(!strcmp(start, end))
-        printf("TEST%sNOTTHIS\n",start);
+        printf("TEST%sNOTTHIS\n",start);  //正常情况下，不会出现在程序运行中...
     else
     {
         int visited[MAXT];
@@ -98,6 +109,7 @@ void findAllPath(Graph* g, char start[], char end[])
 
 void minimumOfTransits(Graph* g){
     system("clear");  //清屏
+    FILE* f=fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "w");
     char cityStart[30];
     printf("\n\n\n\n\n请先输入想要出发的起始城市：\n👉🏻");
     scanf("%s",cityStart);
@@ -113,12 +125,126 @@ void minimumOfTransits(Graph* g){
     printf("\n\n");
     printf("\t\t  所有可行方案：\n");
     findAllPath(g, cityStart, cityEnd);
+    fclose(f);
+    
+    FILE* f1=fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "r");
+    int sum=0;
+    char buf[1024];
+    while (fgets(buf, 1024, f)!=NULL) {
+        sum++;
+    }
+    //printf("%d",sum);
+    fclose(f1);
+    
+    FILE* f2=fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "r");
+    int transArray[sum];
+    char buff[1024];
+    for (int i=0; i<sum; i++) {
+        transArray[i]=compareTrans(fgets(buff, 1024, f2), g);
+    }
+    fclose(f2);
+    
+//    for (int t=0; t<sum; t++) {
+//        printf("%d\n",transArray[t]);
+//    }
+    
+    
+    int theMini=theMiniTrans(transArray,sum);
+    //printf("MT:%d",theMini);
+    int howRep=0;
+    for (int t=0; t<sum; t++) {
+        if (transArray[t]==theMini) {
+            howRep++;
+        }
+    }
+    
+    int readLine[howRep];
+    for (int t=0,b=0; t<sum; t++) {
+        if (transArray[t]==theMini) {
+            readLine[b]=t+1;
+            b++;
+        }
+    }
+    
+    FILE* f3= fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Routes/routes.txt", "a");
+    
+    fputs("从", f3);
+    fputs(cityStart, f3);
+    fputs("到", f3);
+    fputs(cityEnd, f3);
+    fputs("的火车中转次数最少路线为：\n", f3);
+    
+    
+    for (int y=0; y<howRep; y++) {
+        fputs("👉🏻", f3);
+        FILE* f4= fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "r");
+        for (int i=1; i<readLine[y]; i++) {
+            char inst[60];
+            fgets(inst, 60, f4);
+        }
+        char itisit[60];
+        fgets(itisit, 60, f4);  //所以说写代码的时候一定要注意连贯性和完整性！就像现在，我坐在图书馆里（刚吃完饭回来），都不知道接下来要实现什么功能了...
+        //又想起来了！
+        char* bu=strtok(itisit, " ");
+        NumN* h=(NumN*)malloc(sizeof(NumN));   //无头节点！
+        h->next=NULL;
+        h->se=atoi(bu);
+        NumN* r=h;
+        int i=0;
+        for ( ; bu!=NULL; i++) {
+            bu=strtok(NULL, " \n");
+            
+            
+            if (bu!=NULL) {
+                NumN* e=(NumN*)malloc(sizeof(NumN));
+                e->next=NULL;
+                e->se=atoi(bu);
+                //printf("%d\n",atoi(bu));
+                r->next=e;
+                r=e;
+            }
+            
+        }
+        r=h;
+        int allCity=0;
+        for ( ; r!=NULL; r=r->next) {
+            allCity++;
+        }
+        r=h;
+        //现在是把城市下标链表转换成线路表并且存储到最终文件里
+        for (int s=1; s<allCity; s++) {
+            fputs(g->arrays[r->se].data, f3);
+            fputs("-->", f3);
+            r=r->next;
+        }
+        fputs(g->arrays[r->se].data, f3);
+        fputs("\n出发时间为：", f3);
+        r=h;
+        char time[20];
+        EdgeNode* e=g->arrays[r->se].edge;
+        for ( ; e!=NULL; e=e->link) {
+            if (e->adjvex==r->next->se) {
+                strcpy(time, e->info.startTime);
+            }
+        }
+        fputs(time, f3);
+        
+        
+        fputs("\n", f3);
+        fclose(f4);
+    }
+    fputs("\n", f3);
+    fclose(f3);
+    fputs("    中转城市为：", f3);
+    
     printf("\n");
     for (int i=0; i<22; i++) {
         printf("*  ");
     }
     printf("*\n");
-    printf("按Enter键以返回...");
+    printf("线路已保存至：“theBestWayForDestination/theBestWayForDestination/Routes/routes.txt”\n按Enter键以返回...");
+    //deleteTempFile
+    remove("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt");
     getchar();
     getchar();
 }

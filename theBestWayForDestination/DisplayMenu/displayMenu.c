@@ -47,6 +47,7 @@ void displayMenu(Graph* g){
         }
         else if (strcmp(temp, iAmUser)==0)
         {
+            FILE* F= fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Routes/routes.txt", "w");
             displayUsersMenu(g);
             system("clear");
         }
