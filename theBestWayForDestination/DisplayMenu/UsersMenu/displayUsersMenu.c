@@ -25,7 +25,7 @@ void displayUsersMenu(Graph* g){
     char checkTheTrainMap[20]="查看线路";
     char exitMyUser[20]="退出身份";
     char traintrans[30]="中转火车次数最少";
-    char planetrans[30]="中转火车次数最少";
+    char planetrans[30]="中转飞机次数最少";
     char traintime[30]="火车耗时最少";
     char planetime[30]="飞机耗时最少";
     char trainfee[30]="火车费用最少";
@@ -49,23 +49,28 @@ void displayUsersMenu(Graph* g){
         }
         else if (strcmp(temp, planetrans)==0)
         {
-            //modifyCityName(g);
+            
         }
         else if (strcmp(temp, checkTheCityList)==0)
         {
             checkCityList();
         }
-//        else if (strcmp(temp, addATrainMap)==0)
-//        {
-//            addTrainMap(g);
-//        }
-//        else if(strcmp(temp, deleteATrainMap)==0)
-//        {
-//            deleteTrainMap(g);
-//        }
-//        else if(strcmp(temp, modifyATrainMap)==0){
-//            modifyTrainMap(g);
-//        }
+        else if (strcmp(temp, traintime)==0)
+        {
+            
+        }
+        else if(strcmp(temp, planetime)==0)
+        {
+            
+        }
+        else if (strcmp(temp, trainfee)==0)
+        {
+            
+        }
+        else if(strcmp(temp, planefee)==0)
+        {
+            
+        }
         else
         {
             printf("拼写有误，请重新输入：\n");

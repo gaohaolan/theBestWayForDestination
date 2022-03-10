@@ -13,7 +13,7 @@
 #include "theMiniTrans.h"
 #define MAXT 1024
 
-void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
+void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt, int* flag)
 {
     int v=startc;
     int f=endc;
@@ -28,6 +28,7 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
                 {
                     fprintf(f1, "%d",path[i]);
                     fputs(" ", f1);
+                    *flag=1;
                     //printf("%d",path[i]);
                     //printf("站 ");
                     
@@ -42,7 +43,7 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
             {
                 if(!visited[e->adjvex])
                 {
-                    dfs1(g, e->adjvex, endc, visited, path, cnt);
+                    dfs1(g, e->adjvex, endc, visited, path, cnt, flag);
                                  
                 }
             }
@@ -61,6 +62,7 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
             {
                 fprintf(f2, "%d",path[i]);
                 fputs(" ", f2);
+                *flag=1;
                 //printf("%d",path[i]);
                 //printf("站 ");
             }
@@ -74,7 +76,7 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
         {
             if(!visited[e->adjvex])
             {
-                dfs1(g, e->adjvex, endc, visited, path, cnt);
+                dfs1(g, e->adjvex, endc, visited, path, cnt, flag);
                              
             }
         }
@@ -85,7 +87,7 @@ void dfs1(Graph* g, int startc, int endc, int visited[], int path[], int cnt)
  
 
 //输出顶点i到顶点j之间的所有简单路径(不包含回路)
-void findAllPath(Graph* g, char start[], char end[])
+void findAllPath(Graph* g, char start[], char end[],int* flag)
 {
     int startc=findadj(start, g);
     int endc=findadj(end, g);
@@ -100,7 +102,7 @@ void findAllPath(Graph* g, char start[], char end[])
             visited[i]=0;
         }   //初始化数组visited的元素值为0，表示均未访问
         int path[MAXT];
-        dfs1(g, startc, endc, visited, path, 0);
+        dfs1(g, startc, endc, visited, path, 0, flag);
     }
  
 }
@@ -123,8 +125,9 @@ void minimumOfTransits(Graph* g){
     }
     printf("*");
     printf("\n\n");
-    printf("\t\t  所有可行方案：\n");
-    findAllPath(g, cityStart, cityEnd);
+    printf("\t\t  所有中转火车次数最少方案：\n\n");
+    int flag=0;
+    findAllPath(g, cityStart, cityEnd, &flag);
     fclose(f);
     
     FILE* f1=fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/testText/miniLinesChoice.txt", "r");
@@ -173,7 +176,12 @@ void minimumOfTransits(Graph* g){
     fputs("到", f3);
     fputs(cityEnd, f3);
     fputs("的火车中转次数最少路线为：\n", f3);
+    //重点关注这里！
     
+    if (flag==0) {
+        printf("🚫无法到达目的地！暂无线路可以抵达！\n");
+        fputs("🚫无法到达目的地！暂无线路可以抵达！\n", f3);
+    }
     
     for (int y=0; y<howRep; y++) {
         fputs("👉🏻", f3);
@@ -212,14 +220,19 @@ void minimumOfTransits(Graph* g){
         }
         r=h;
         //现在是把城市下标链表转换成线路表并且存储到最终文件里
+        //printf("allcity:%d",allCity);
         int cityNumArray[allCity];
         for (int s=1; s<allCity; s++) {
             cityNumArray[s-1]=r->se;
             fputs(g->arrays[r->se].data, f3);
+            printf("%s",g->arrays[r->se].data);
             fputs("-->", f3);
+            printf("-->");
             r=r->next;
         }
         fputs(g->arrays[r->se].data, f3);
+        cityNumArray[allCity-1]=r->se;
+        printf("%s",g->arrays[r->se].data);
         fputs("\n出发时间为：", f3);
         r=h;
         char time[20];
@@ -230,8 +243,9 @@ void minimumOfTransits(Graph* g){
             }
         }
         fputs(time, f3);
-        fputs("\n中转城市为：", f3);
+        
         if (theMini==0) {
+            fputs("\n中转城市为：", f3);
             fputs("无需中转城市！\n乘坐路线为：", f3);
             char lineInfo[20];
             e=g->arrays[r->se].edge;
@@ -254,6 +268,7 @@ void minimumOfTransits(Graph* g){
                 int a=cityNumArray[kun-1];
                 int b=cityNumArray[kun];
                 int c=cityNumArray[kun+1];
+                //printf("ini:%d\n",c);
                 for (EdgeNode* e=g->arrays[b].edge; e!=NULL; e=e->link) {
                     if (e->adjvex==c) {
                         strcpy(t2, e->info.transportation);
@@ -272,16 +287,28 @@ void minimumOfTransits(Graph* g){
                     fputs(g->arrays[b].data, f3);
                     fputs("---", f3);
                 }
-                if (kun==allCity-2) {
-                    fputs(t2, f3);
+                if (kun==(allCity-2)) {
+                    char lastLine[20];
+                    EdgeNode* rr=g->arrays[b].edge;
+                    for ( ; rr!=NULL; rr=rr->link) {
+                        //printf("b=%d,c=%d\n,==%d",b,c,rr->adjvex);
+                        if ((rr->adjvex)==c) {
+                            strcpy(lastLine, rr->info.transportation);
+                            //printf("ok");
+                        }
+                    }
+                    fputs(lastLine, f3);
+                    //printf("%s",lastLine);
                 }
             }
         }
         
         fputs("\n", f3);
+        printf("\n");
         fclose(f4);
     }
     fputs("\n", f3);
+    printf("\n");
     fclose(f3);
     
     
