@@ -6,3 +6,13 @@
 //
 
 #include "lessTime.h"
+#include <stdlib.h>
+#include <string.h>
+#include "isReasonable.h"
+#include "compareTrans.h"
+#include "theMiniTrans.h"
+
+
+void lessTime(Graph* g){
+    
+}

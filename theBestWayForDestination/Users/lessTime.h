@@ -9,5 +9,8 @@
 #define lessTime_h
 
 #include <stdio.h>
+#include "createGraph.h"
+#include "minimumOfTransits.h"
 
+void lessTime(Graph* g);
 #endif /* lessTime_h */

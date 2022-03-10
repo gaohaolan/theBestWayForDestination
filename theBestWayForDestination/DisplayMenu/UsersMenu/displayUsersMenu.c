@@ -17,6 +17,9 @@
 #include "checkTrainMap.h"
 #include "howManyLines.h"
 #include "minimumOfTransits.h"
+#include "lessTime.h"
+#include "lessFee.h"
+
 
 //显示使用者选单与操作。
 void displayUsersMenu(Graph* g){
@@ -49,7 +52,7 @@ void displayUsersMenu(Graph* g){
         }
         else if (strcmp(temp, planetrans)==0)
         {
-            
+            //
         }
         else if (strcmp(temp, checkTheCityList)==0)
         {
@@ -57,19 +60,19 @@ void displayUsersMenu(Graph* g){
         }
         else if (strcmp(temp, traintime)==0)
         {
-            
+            lessTime(g);
         }
         else if(strcmp(temp, planetime)==0)
         {
-            
+            //
         }
         else if (strcmp(temp, trainfee)==0)
         {
-            
+            lessFee(g);
         }
         else if(strcmp(temp, planefee)==0)
         {
-            
+            //
         }
         else
         {
