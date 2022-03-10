@@ -241,9 +241,11 @@ void lessFee(Graph* g){
         fputs(time, f3);
         fputs("\n", f3);
         fputs("总费用为：", f3);
+        printf("\n最少费用为：%d元。",theLessFee);
         char buuf[38];
         sprintf(buuf, "%d",theLessFee);
         fputs(buuf, f3);
+        fputs("元。", f3);
         fputs("\n", f3);
         printf("\n");
         fclose(f4);

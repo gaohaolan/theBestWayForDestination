@@ -1,14 +1,15 @@
 //
-//  totalFee.c
+//  totalTime.c
 //  theBestWayForDestination
 //
 //  Created by 高浩岚 on 2022/3/10.
 //
 
-#include "totalFee.h"
+#include "totalTime.h"
 #include "minimumOfTransits.h"
+#include "howLong.h"
 
-int totalFee(char vexs[],Graph* g){
+int totalTime(char vexs[],Graph* g){
     char* bu=strtok(vexs, " ");
     NumN* h=(NumN*)malloc(sizeof(NumN));
     h->next=NULL;
@@ -35,17 +36,23 @@ int totalFee(char vexs[],Graph* g){
         r=r->next;
     }
     
-    int totalFee=0;
-    
-    for (int j=1; j<=i-1; j++) {
-        int b=allArray[j];
-        int a=allArray[j-1];
-        for (EdgeNode* e=g->arrays[a].edge; e!=NULL; e=e->link) {
-            if (e->adjvex==b) {
-                totalFee=totalFee+e->info.fee;
-            }
+    int totalTime=0;
+    char startTime[20];
+    char endTime[20];
+    int b=allArray[1];
+    int a=allArray[0];
+    for (EdgeNode* e=g->arrays[a].edge; e!=NULL; e=e->link) {
+        if (e->adjvex==b) {
+            strcpy(startTime, e->info.startTime);
         }
     }
-    return totalFee;
+    b=allArray[i-1];
+    a=allArray[i-2];
+    for (EdgeNode* e=g->arrays[a].edge; e!=NULL; e=e->link) {
+        if (e->adjvex==b) {
+            strcpy(endTime, e->info.endTime);
+        }
+    }
+    totalTime=howLong(startTime, endTime);
+    return totalTime;
 }
-

@@ -12,5 +12,7 @@
 #include "createGraph.h"
 #include "minimumOfTransits.h"
 
+void dfs3(Graph* g, int startc, int endc, int visited[], int path[], int cnt, int* flag);  //会打印出来所有可能的路线！
+void findAllPath3(Graph* g, char start[], char end[],int* flag);
 void lessTime(Graph* g);
 #endif /* lessTime_h */
