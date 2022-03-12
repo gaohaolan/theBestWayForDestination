@@ -27,6 +27,7 @@ int main(int argc, const char * argv[])
     //结束作业展示，程序结束。
     system("clear");
     printgraph(g);
+    printgraphair(gair);
     //printf("\n\n\n\n\n高浩岚 202013407047  \n谢谢林老师的指导😃\n\n\n\n\n");
     return 0;
 }

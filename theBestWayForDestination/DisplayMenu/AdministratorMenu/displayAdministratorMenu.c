@@ -29,7 +29,8 @@
 #include "modifyAirCityName.h"
 #include "addCityair.h"
 #include "deleteAirMap.h"
-
+#include "addAirMap.h"
+#include "deleteCityAir.h"
 
 
 
@@ -102,19 +103,19 @@ void displayAdministratorMenu(Graph* g,Graph* gair){
             modifyAirCityName(gair);
         }
         else if(strcmp(temp, modifyATrainMapair)==0){
-            
+            modifyAirMap(gair);
         }
         else if(strcmp(temp, addACityair)==0){
             addCityair(gair);
         }
-        else if(strcmp(temp, deleteATrainMapair)==0){
-            deleteAirMap(gair);
+        else if(strcmp(temp, addATrainMapair)==0){
+            addAirMap(gair);
         }
         else if(strcmp(temp, deleteATrainMapair)==0){
             deleteAirMap(gair);
         }
-        else if(strcmp(temp, deleteATrainMapair)==0){
-            deleteAirMap(gair);
+        else if(strcmp(temp, deleteACityair)==0){
+            deleteCityAir(gair);
         }
         else
         {
