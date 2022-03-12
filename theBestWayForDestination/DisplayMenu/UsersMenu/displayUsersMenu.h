@@ -10,5 +10,6 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
 void displayUsersMenu(Graph* g,Graph* gair);
 #endif /* displayUsersMenu_h */

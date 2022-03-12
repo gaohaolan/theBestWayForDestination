@@ -43,34 +43,17 @@ void addTrainMap(Graph* g){
     //图结构进行加边
     char allCityinLine[1024];
     printf("\n\n\n\n\n请按顺序输入所有城市名称（以,分隔）：\n👉🏻");
-    
-   // getchar();
-   // getchar();
-    //getchar();
-    //getchar();
     scanf("%s",allCityinLine);
     city123* c1=(city123*)malloc(sizeof(city123));
     c1->link=NULL;
     city123* cc;
-    //printf("test1\n");
-    //printf("%s\n",allCityinLine);
     char* temp;
     temp = strtok(allCityinLine,",\n\r\0");
-    //printf("test1\n");
-    //printf("%s",temp);
-    //printf("test2\n");
-    //printf("2%s",allCityinLine);
-    //printf("%s==",temp);
-    //cc=(city123*)malloc(sizeof(city123));
     strcpy(c1->cityName, temp);
-    //cc->link=NULL;
     city123* r=c1;
-    //printf("test3\n");
     for (int i=1; i<citySum; i++) {
         cc=(city123*)malloc(sizeof(city123));
         char *temp2 = strtok(NULL,",\r\n\0");
-        //printf("inner\n");
-        //printf("%s\n",temp2);
         strcpy(cc->cityName, temp2);
         cc->link=NULL;
         r->link=cc;
@@ -78,11 +61,10 @@ void addTrainMap(Graph* g){
     }
     r->link=NULL;
     city123* newwc=c1;
-    //printf("1这里没有问题！\n");
+
     
     city123* tryp=c1;
     while (tryp!=NULL) {
-        //printf("%s->",tryp->cityName);
         tryp=tryp->link;
     }
     
@@ -93,14 +75,11 @@ void addTrainMap(Graph* g){
         char fircn[20];
         char nexcn[20];
         strcpy(fircn, newwc->cityName);
-        //printf("%s\n",fircn);
         newwc=newwc->link;
         strcpy(nexcn, newwc->cityName);
-        //printf("%s\n",nexcn);
         printf("\n\n\n\n现在请输入%s从%s到%s的...\n\n",newLine,fircn,nexcn);
         EdgeNode* f1=g->arrays[findadj(fircn, g)].edge;
         if (f1==NULL) {
-            //printf("lll这里没有问题！\n");
             EdgeNode* ane=(EdgeNode*)malloc(sizeof(EdgeNode));
             printf("出发时间：");
             char stt[20];
@@ -128,7 +107,6 @@ void addTrainMap(Graph* g){
             g->arrays[findadj(fircn, g)].edge=ane;
         }
         else{
-            //printf("lll这里没有问题！\n");
             EdgeNode* ane=(EdgeNode*)malloc(sizeof(EdgeNode));
             printf("出发时间：");
             char stt[20];
@@ -157,8 +135,6 @@ void addTrainMap(Graph* g){
         }
         
     }
-    //printf("5这里没有问题！\n");
-    //printgraph(g);
     getchar();
     reWrite(g);
     taskCompleted();

@@ -9,5 +9,6 @@
 #define showAdministratorContents_h
 
 #include <stdio.h>
+
 void showAdministratorContents(void);
 #endif /* showAdministratorContents_h */

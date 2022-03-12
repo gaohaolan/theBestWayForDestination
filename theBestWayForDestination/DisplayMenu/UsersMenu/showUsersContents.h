@@ -9,5 +9,6 @@
 #define showUsersContents_h
 
 #include <stdio.h>
+
 void showUsersContents(void);
 #endif /* showUsersContents_h */

@@ -10,5 +10,6 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
 void addCity(Graph* g);
 #endif /* addCity_h */

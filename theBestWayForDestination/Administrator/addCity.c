@@ -15,7 +15,6 @@
 //新加城市
 void addCity(Graph* g){
     system("clear");  //清屏
-    //printf("\n\n\n\n\n操作成功！\n\n按Enter键以继续...");
     FILE * pFile;
     pFile = fopen ("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Text/cityList.txt","a");
     char cityString[30];

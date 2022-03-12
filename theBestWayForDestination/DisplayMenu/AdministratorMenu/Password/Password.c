@@ -12,5 +12,5 @@
 
 void password(void){
     system("clear");
-    printf("\n\n\n\n\n请输入管理员密码：\n");
+    printf("\n\n\n\n\n🔑请输入管理员密码：\n");
 }

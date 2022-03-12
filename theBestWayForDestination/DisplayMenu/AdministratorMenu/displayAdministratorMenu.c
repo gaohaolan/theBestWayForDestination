@@ -119,7 +119,7 @@ void displayAdministratorMenu(Graph* g,Graph* gair){
         }
         else
         {
-            printf("拼写有误，请重新输入：\n");
+            printf("🚫拼写有误，请重新输入：\n");
             scanf("%s",temp);
             continue;
             

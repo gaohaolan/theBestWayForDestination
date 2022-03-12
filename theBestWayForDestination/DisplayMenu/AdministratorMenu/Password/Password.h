@@ -9,5 +9,6 @@
 #define Password_h
 
 #include <stdio.h>
+
 void password(void);
 #endif /* Password_h */

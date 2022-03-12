@@ -7,9 +7,9 @@
 
 #include "showContents.h"
 #include <stdlib.h>
+
 void showContents(void){
     system("clear");
-    //printf("1");
     printf("\n\n");
     for (int i=0; i<22; i++) {
         printf("*  ");
@@ -21,5 +21,5 @@ void showContents(void){
         printf("*  ");
     }
     printf("*");
-    printf("\n\n以中文输入您的身份：使用者 还是 管理员\n或者是 退出系统？\n");
+    printf("\n\n以中文输入您的身份：👤使用者 还是 💁🏻‍♂️管理员\n或者是 ⛔️退出系统？\n");
 }

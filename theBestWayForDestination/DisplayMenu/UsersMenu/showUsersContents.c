@@ -7,6 +7,7 @@
 
 #include "showUsersContents.h"
 #include <stdlib.h>
+
 void showUsersContents(void){
     system("clear");
     printf("\n\n");

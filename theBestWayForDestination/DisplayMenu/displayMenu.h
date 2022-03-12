@@ -11,5 +11,6 @@
 #include <stdio.h>
 #include "createGraph.h"
 #include "createGraphair.h"
+
 void displayMenu(Graph* g,Graph* gair);
 #endif /* displayMenu_h */

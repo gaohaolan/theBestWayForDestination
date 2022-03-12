@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
 void addTrainMap(Graph* g);
 
 typedef struct city123{

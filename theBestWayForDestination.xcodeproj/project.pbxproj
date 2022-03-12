@@ -318,7 +318,6 @@
 				6EF5EE1F27C26D8300F9E157 /* howLong.c */,
 				6E46E17827CD29B5000F94D2 /* reWrite.h */,
 				6E46E17927CD29B5000F94D2 /* reWrite.c */,
-				6EDC9B8E27DB60950023F267 /* Airplane */,
 				6EDC9B6C27D7A2750023F267 /* isReasonable.c */,
 				6EDC9B6B27D7A2750023F267 /* isReasonable.h */,
 				6EDC9B6E27D86C300023F267 /* compareTrans.h */,
@@ -329,6 +328,7 @@
 				6EDC9B7527D9D78B0023F267 /* totalFee.c */,
 				6EDC9B7727DA01FF0023F267 /* totalTime.h */,
 				6EDC9B7827DA01FF0023F267 /* totalTime.c */,
+				6EDC9B8E27DB60950023F267 /* Airplane */,
 			);
 			path = Others;
 			sourceTree = "<group>";

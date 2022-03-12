@@ -14,14 +14,15 @@
 
 int main(int argc, const char * argv[])
 {
-    //初始化，将已经预置的城市 建图。
+    //初始化，将已经预置的城市 分别 建图。
     remove("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Routes/routes.txt");
+    remove("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Routes/routesAir.txt");
     Graph* g;
     Graph* gair;
     g=createGraph();
     gair=createGraphair();
-    //显示选单与操作。
     
+    //显示选单与操作。
     displayMenu(g,gair);
     
     //结束作业展示，程序结束。
