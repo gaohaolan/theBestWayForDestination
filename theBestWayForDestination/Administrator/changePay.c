@@ -21,7 +21,7 @@ void changePay(Graph* g,char vexs[]){
     EdgeNode* j=g->arrays[1].edge;
     for (int i=1; i<=g->numVertexes; i++) {
         if (!strcmp(g->arrays[i].data, beginsta)) {
-            for ( ; j!=NULL ; j=j->link) {
+            for (j=g->arrays[i].edge; j!=NULL ; j=j->link) {
                 if (!strcmp(endsta, g->arrays[j->adjvex].data)) {
                     break;
                 }

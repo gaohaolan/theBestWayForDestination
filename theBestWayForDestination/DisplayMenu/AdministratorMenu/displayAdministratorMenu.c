@@ -22,21 +22,38 @@
 #include "deleteTrainMap.h"
 #include "deleteCity.h"
 #include "modifyTrainMap.h"
+#include "checkCityListair.h"
+#include "checkAirMap.h"
+#include "createGraphair.h"
+#include "modifyAirMap.h"
+#include "modifyAirCityName.h"
+#include "addCityair.h"
+#include "deleteAirMap.h"
+
+
 
 
 
 //显示管理员选单与操作。
-void displayAdministratorMenu(Graph* g){
+void displayAdministratorMenu(Graph* g,Graph* gair){
     showAdministratorContents();
-    char addACity[20]="新加城市";
-    char deleteACity[20]="删去城市";
-    char modifyACity[20]="更改城市";
-    char checkTheCityList[20]="查看城市";
-    char checkTheTrainMap[20]="查看线路";
-    char addATrainMap[20]="新加线路";
-    char deleteATrainMap[20]="删去线路";
+    char addACity[20]="新加火车城市";
+    char deleteACity[20]="删去火车城市";
+    char modifyACity[20]="更改火车城市";
+    char checkTheCityList[20]="查看火车城市";
+    char checkTheTrainMap[20]="查看火车线路";
+    char addATrainMap[20]="新加火车线路";
+    char deleteATrainMap[20]="删去火车线路";
     char exitMyAdministrator[20]="退出身份";
-    char modifyATrainMap[20]="更改线路";
+    char modifyATrainMap[20]="更改火车线路";
+    char addACityair[20]="新加飞机城市";
+    char deleteACityair[20]="删去飞机城市";
+    char modifyACityair[20]="更改飞机城市";
+    char checkTheCityListair[20]="查看飞机城市";
+    char checkTheTrainMapair[20]="查看飞机线路";
+    char addATrainMapair[20]="新加飞机线路";
+    char deleteATrainMapair[20]="删去飞机线路";
+    char modifyATrainMapair[20]="更改飞机线路";
     char temp[38];
     
     printf("👉🏻请输入想要进行的操作名称：\n");
@@ -75,11 +92,36 @@ void displayAdministratorMenu(Graph* g){
         else if(strcmp(temp, modifyATrainMap)==0){
             modifyTrainMap(g);
         }
+        else if(strcmp(temp, checkTheCityListair)==0){
+            checkCityListair();
+        }
+        else if(strcmp(temp, checkTheTrainMapair)==0){
+            checkAirMap();
+        }
+        else if(strcmp(temp, modifyACityair)==0){
+            modifyAirCityName(gair);
+        }
+        else if(strcmp(temp, modifyATrainMapair)==0){
+            
+        }
+        else if(strcmp(temp, addACityair)==0){
+            addCityair(gair);
+        }
+        else if(strcmp(temp, deleteATrainMapair)==0){
+            deleteAirMap(gair);
+        }
+        else if(strcmp(temp, deleteATrainMapair)==0){
+            deleteAirMap(gair);
+        }
+        else if(strcmp(temp, deleteATrainMapair)==0){
+            deleteAirMap(gair);
+        }
         else
         {
             printf("拼写有误，请重新输入：\n");
             scanf("%s",temp);
             continue;
+            
         }
         showAdministratorContents();
         printf("👉🏻请继续输入想要进行的操作：\n");

@@ -6,7 +6,7 @@
 //
 
 #include "reWrite.h"
-#include "string.h"
+#include <string.h>
 #include <stdlib.h>
 
 void DFSaLine(GraphArrays g,int i,LNode* ln,PartLNode* pp,char nnname[])

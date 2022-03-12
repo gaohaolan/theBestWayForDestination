@@ -10,5 +10,6 @@
 
 #include <stdio.h>
 #include "createGraph.h"
-void displayAdministratorMenu(Graph* g);
+
+void displayAdministratorMenu(Graph* g,Graph* gair);
 #endif /* displayAdministratorMenu_h */

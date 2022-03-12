@@ -19,12 +19,12 @@ void modifyCityName(Graph* g){
     pFile = fopen ("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Text/cityList.txt","w");
     system("clear");  //清屏
     char cityString[30];
-    printf("\n\n\n\n\n请分别输入想要变更名称的城市原名称（“结束”来完成操作）：\n👉🏻");
+    printf("\n\n\n\n\n请分别输入想要变更名称的火车城市原名称（“结束”来完成操作）：\n👉🏻");
     scanf("%s",cityString);
     while (strcmp(cityString,"结束")) {
         if(!isCityRepeat(g, cityString))
         {
-            printf("\n🚫要更改的城市名称不存在！\n请重新输入...\n👉🏻");
+            printf("\n🚫要更改的火车城市名称不存在！\n请重新输入...\n👉🏻");
             scanf("%s",cityString);
         }
         else
@@ -38,17 +38,16 @@ void modifyCityName(Graph* g){
             getchar();
             taskCompleted();
             system("clear");
-            printf("\n\n\n\n\n请继续输入想要更改名称的城市（“结束”来完成操作）：\n👉🏻");
+            printf("\n\n\n\n\n请继续输入想要更改名称的火车城市（“结束”来完成操作）：\n👉🏻");
             scanf("%s",cityString);
         }
     }
     getchar();
-    fputs(g->arrays[1].data, pFile);
-    for (int i=2; i<=g->numVertexes; i++) {
-        fputc('\n', pFile);
+    for (int i=1; i<=g->numVertexes; i++) {
         fputs(g->arrays[i].data, pFile);
+        fputc('\n', pFile);
     }
     fclose(pFile);
-    reWrite(g);
+    //reWrite(g);
     taskCompleted();
 }

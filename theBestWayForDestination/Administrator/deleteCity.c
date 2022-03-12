@@ -10,6 +10,7 @@
 #include <string.h>
 #include "reWrite.h"
 #include "deleteTrainMap.h"
+#include "createGraph.h"
 
 
 void deleteCity(Graph* g){
@@ -300,7 +301,8 @@ void deleteCity(Graph* g){
             fclose(o2o);
             
             g->numVertexes--;
-            
+            reWrite(g);
+            *g=*createGraph();
             getchar();
             taskCompleted();
             system("clear");
@@ -310,6 +312,6 @@ void deleteCity(Graph* g){
         }
     }
     getchar();
-    reWrite(g);
+    //差点就错了，这个地方真的很易错！
     taskCompleted();
 }

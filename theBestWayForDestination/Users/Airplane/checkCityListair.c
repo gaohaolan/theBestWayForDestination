@@ -1,15 +1,15 @@
 //
-//  checkCityList.c
+//  checkCityListair.c
 //  theBestWayForDestination
 //
-//  Created by 高浩岚 on 2022/2/18.
+//  Created by 高浩岚 on 2022/3/11.
 //
 
-#include "checkCityList.h"
+#include "checkCityListair.h"
 #include <stdlib.h>
 
 
-void checkCityList(void){
+void checkCityListair(void){
     int num = 0;
     system("clear");
     printf("\n\n");
@@ -18,11 +18,11 @@ void checkCityList(void){
     }
     printf("*");
     printf("\n\n");
-    printf("\t\t 🧾🏠所有城市(火车)\n");
+    printf("\t\t 🧾🏡所有城市(飞机)\n");
     FILE* fp;
     char str[100];
  
-    fp = fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Text/cityList.txt", "r");
+    fp = fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Text/cityListair.txt", "r");
     
     while (fscanf(fp, "%s", str) != EOF)
     {

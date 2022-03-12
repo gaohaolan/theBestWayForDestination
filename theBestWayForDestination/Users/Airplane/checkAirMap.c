@@ -1,17 +1,16 @@
 //
-//  checkTrainMap.c
+//  checkAirMap.c
 //  theBestWayForDestination
 //
-//  Created by 高浩岚 on 2022/2/18.
+//  Created by 高浩岚 on 2022/3/11.
 //
 
-#include "checkTrainMap.h"
+#include "checkAirMap.h"
 #include <stdlib.h>
 #include <string.h>
 #define MAX_LINE 100
 
-
-void checkTrainMap(void){
+void checkAirMap(void){
     system("clear");
     printf("\n\n");
     for (int i=0; i<22; i++) {
@@ -19,10 +18,10 @@ void checkTrainMap(void){
     }
     printf("*");
     printf("\n\n");
-    printf("\t\t    🧾🚉所有车次清单\n\n火车车次   火车站名   到站时间      发车时间    票价\n");
+    printf("\t\t\t🧾✈️ 所有航班清单\n\n  航班号   起点站   终点站   出发时间   到达时间   票价\n");
     
     char buf[MAX_LINE];  //缓冲区
-    FILE *fp = fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Text/trainTimetables.txt","r");
+    FILE *fp = fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Text/aircraftTimetables.txt","r");
     for (int j=1; j<=2; j++) {
             fgets(buf,MAX_LINE,fp);
         }

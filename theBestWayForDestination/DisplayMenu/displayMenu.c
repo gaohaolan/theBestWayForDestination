@@ -17,7 +17,7 @@
 #include "displayUsersMenu.h"
 
 //首先要选择是使用者还是管理员。
-void displayMenu(Graph* g){
+void displayMenu(Graph* g, Graph* gair){
     showContents();
     char iAmUser[20]="使用者";
     char iAmAdministrator[20]="管理员";
@@ -34,7 +34,7 @@ void displayMenu(Graph* g){
             scanf("%s",passwords);
             if(strcmp(passwords, "111")==0)
             {
-                displayAdministratorMenu(g);
+                displayAdministratorMenu(g,gair);
                 system("clear");
             }
             else
@@ -48,7 +48,7 @@ void displayMenu(Graph* g){
         else if (strcmp(temp, iAmUser)==0)
         {
             FILE* F= fopen("/Users/gaohaolan/高浩岚的本地文件/theBestWayForDestination/theBestWayForDestination/Routes/routes.txt", "w");
-            displayUsersMenu(g);
+            displayUsersMenu(g,gair);
             fclose(F);
             system("clear");
         }
