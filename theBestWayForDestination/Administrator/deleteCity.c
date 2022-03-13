@@ -300,7 +300,35 @@ void deleteCity(Graph* g){
             }
             fclose(o2o);
             
+            
+            for (int gai=1; gai<=g->numVertexes; gai++) {
+                EdgeNode* ling=g->arrays[gai].edge;
+                while (ling!=NULL) {
+                    if (ling->adjvex>=whereCity) {
+                        ling->adjvex=(ling->adjvex)-1;
+                    }
+                    ling=ling->link;
+                }
+            }
+            
+            for (int zgai=0; zgai<(g->numVertexes-whereCity); zgai++) {
+                strcpy(g->arrays[whereCity+zgai].data, g->arrays[whereCity+1+zgai].data);
+            }
+            
+            for (int jxg=0; jxg<(g->numVertexes-whereCity); jxg++) {
+                g->arrays[whereCity+jxg].edge=g->arrays[whereCity+jxg+1].edge;
+            }
+            
+            //free(g->arrays[g->numVertexes].edge);
+            g->arrays[g->numVertexes].edge=NULL;
+            
             g->numVertexes--;
+            
+            
+            
+            
+            
+            
             reWrite(g);
             *g=*createGraph();
             getchar();

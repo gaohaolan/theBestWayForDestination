@@ -31,7 +31,7 @@ void changeEndTime(Graph* g,char vexs[]){
         }
     }
     system("clear");
-    printf("\n\n\n\n\n线路%s从起点站%s到终点站%s的到达时间：\n\n原时间为🕒%s",vexs,beginsta,endsta,j->info.endTime);
+    printf("\n\n\n\n\n线路%s从起点站%s到终点站%s的到达时间：\n\n原时间为🕔%s",vexs,beginsta,endsta,j->info.endTime);
     char endTime[20];
     printf("\n\n\n");
     for (int i=0; i<22; i++) {

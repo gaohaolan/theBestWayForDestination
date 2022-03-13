@@ -14,7 +14,7 @@ void changePayAir(Graph* gair,char vexs[]){
     
     //现在找到航班对应的边节点
     EdgeNode* jj=gair->arrays[1].edge;
-    for (int i=1; i<=gair->numEdges; i++) {
+    for (int i=1; i<=gair->numVertexes; i++) {
         EdgeNode* j=gair->arrays[i].edge;
         while (j!=NULL) {
             if (!strcmp(j->info.transportation, vexs)) {

@@ -25,7 +25,7 @@ void modifyTrainMap(Graph* g){
         scanf("%s",modifyLine);
     }
     system("clear");
-    printf("\n\n\n\n\n输入想要对%s进行的操作：\n更改发车时间\t更改到站时间\t更改区间票价\n退出\n\n👉🏻",modifyLine);
+    printf("\n\n\n\n\n输入想要对%s进行的操作：\n\n🕒更改发车时间\t🕔更改到站时间\t💵更改区间票价\n\n退出\n\n👉🏻",modifyLine);
     char option[30];
     scanf("%s",option);
     while (strcmp(option,"退出")) {
@@ -39,7 +39,7 @@ void modifyTrainMap(Graph* g){
             changePay(g, modifyLine);
         }
         system("clear");
-        printf("\n\n\n\n\n继续输入想要对%s进行的操作：\n\n更改发车时间\t更改到站时间\t更改区间票价\n或者是 退出？\n\n👉🏻",modifyLine);
+        printf("\n\n\n\n\n继续输入想要对%s进行的操作：\n\n🕒更改发车时间\t🕔更改到站时间\t💵更改区间票价\n\n或者是 退出？\n\n👉🏻",modifyLine);
         scanf("%s",option);
     }
 }

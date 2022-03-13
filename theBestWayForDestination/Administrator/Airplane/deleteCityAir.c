@@ -191,7 +191,33 @@ void deleteCityAir(Graph* gair){
             }
             fclose(o2o);
             
+            //printf("ok\n");
+            for (int gai=1; gai<=gair->numVertexes; gai++) {
+                EdgeNode* ling=gair->arrays[gai].edge;
+                while (ling!=NULL) {
+                    if (ling->adjvex>whereCity) {
+                        ling->adjvex=(ling->adjvex)-1;
+                    }
+                    ling=ling->link;
+                }
+            }
+            //printf("ok1\n");
+            for (int zgai=0; zgai<(gair->numVertexes-whereCity); zgai++) {
+                strcpy(gair->arrays[whereCity+zgai].data, gair->arrays[whereCity+1+zgai].data);
+            }
+            //printf("ok2\n");
+            for (int jxg=0; jxg<(gair->numVertexes-whereCity); jxg++) {
+                gair->arrays[whereCity+jxg].edge=gair->arrays[whereCity+jxg+1].edge;
+            }
+            //printf("ok3\n");
+            //free(gair->arrays[gair->numVertexes].edge);
+            gair->arrays[gair->numVertexes].edge=NULL;
+            
+            
+            //printf("ok4\n");
             gair->numVertexes--; //可不能只--！
+            
+            //printf("ok5\n");
             reWriteair(gair);     //ADD1
             *gair=*createGraphair();     //ADD2
             getchar();
@@ -203,6 +229,6 @@ void deleteCityAir(Graph* gair){
         }
     }
     getchar();
-    //太易错！
+    //太易错！       //是的，刚才又错了一次...
     taskCompleted();
 }

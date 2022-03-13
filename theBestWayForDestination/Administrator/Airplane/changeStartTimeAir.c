@@ -15,7 +15,7 @@ void changeStartTimeAir(Graph* gair,char vexs[]){
     
     //现在找到航班对应的边节点
     EdgeNode* jj=gair->arrays[1].edge;
-    for (int i=1; i<=gair->numEdges; i++) {
+    for (int i=1; i<=gair->numVertexes; i++) {
         EdgeNode* j=gair->arrays[i].edge;
         while (j!=NULL) {
             if (!strcmp(j->info.transportation, vexs)) {
@@ -34,7 +34,7 @@ void changeStartTimeAir(Graph* gair,char vexs[]){
     for (int i=0; i<22; i++) {
         printf("*  ");
     }
-    printf("*\n新时间为🕔");
+    printf("*\n新时间为🕒");
     scanf("%s",startTime);
     strcpy(jj->info.startTime, startTime);
     reWriteair(gair);

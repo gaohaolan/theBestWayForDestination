@@ -37,7 +37,7 @@ void changeStartTime(Graph* g,char vexs[]){
     for (int i=0; i<22; i++) {
         printf("*  ");
     }
-    printf("*\n新时间为🕔");
+    printf("*\n新时间为🕒");
     scanf("%s",startTime);
     strcpy(j->info.startTime, startTime);
     reWrite(g);

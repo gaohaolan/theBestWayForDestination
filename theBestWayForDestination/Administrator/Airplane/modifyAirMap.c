@@ -20,7 +20,7 @@ void modifyAirMap(Graph* gair){
     printf("\n\n\n\n\n请输入想要更改的航班：\n👉🏻");
     scanf("%s",modifyLine);
     system("clear");
-    printf("\n\n\n\n\n输入想要对%s进行的操作：\n更改出发时间\t更改到达时间\t更改航班票价\n退出\n\n👉🏻",modifyLine);
+    printf("\n\n\n\n\n输入想要对%s进行的操作：\n\n🕒更改出发时间\t🕔更改到达时间\t💵更改航班票价\n\n退出\n\n👉🏻",modifyLine);
     char option[30];
     scanf("%s",option);
     while (strcmp(option,"退出")) {
@@ -34,7 +34,7 @@ void modifyAirMap(Graph* gair){
             changePayAir(gair, modifyLine);
         }
         system("clear");
-        printf("\n\n\n\n\n继续输入想要对%s进行的操作：\n\n更改出发时间\t更改到达时间\t更改航班票价\n或者是 退出？\n\n👉🏻",modifyLine);
+        printf("\n\n\n\n\n继续输入想要对%s进行的操作：\n\n🕒更改出发时间\t🕔更改到达时间\t💵更改航班票价\n\n或者是 退出？\n\n👉🏻",modifyLine);
         scanf("%s",option);
     }
 }
