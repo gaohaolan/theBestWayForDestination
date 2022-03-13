@@ -71,10 +71,10 @@
 /* Begin PBXFileReference section */
 		6E297B9427B6344300ACA855 /* theBestWayForDestination */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = theBestWayForDestination; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E297B9727B6344300ACA855 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		6E2BB8A827DCAF3B000AF1F3 /* minimumOfTransitsAir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minimumOfTransitsAir.h; sourceTree = "<group>"; };
 		6E2BB8A927DCAF3B000AF1F3 /* minimumOfTransitsAir.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minimumOfTransitsAir.c; sourceTree = "<group>"; };
 		6E2BB8AB27DCB8E1000AF1F3 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		6E2BB8AC27DCB8E1000AF1F3 /* Queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
+		6E2BB8AE27DE10F1000AF1F3 /* minimumOfTransitsAir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minimumOfTransitsAir.h; sourceTree = "<group>"; };
 		6E46E17827CD29B5000F94D2 /* reWrite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reWrite.h; sourceTree = "<group>"; };
 		6E46E17927CD29B5000F94D2 /* reWrite.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reWrite.c; sourceTree = "<group>"; };
 		6E46E17B27CDF0F0000F94D2 /* modifyCityName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modifyCityName.h; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 				6EDC9B8127DA5FA10023F267 /* checkCityListair.c */,
 				6EDC9B8327DA62790023F267 /* checkAirMap.h */,
 				6EDC9B8427DA62790023F267 /* checkAirMap.c */,
-				6E2BB8A827DCAF3B000AF1F3 /* minimumOfTransitsAir.h */,
+				6E2BB8AE27DE10F1000AF1F3 /* minimumOfTransitsAir.h */,
 				6E2BB8A927DCAF3B000AF1F3 /* minimumOfTransitsAir.c */,
 				6E2BB8AB27DCB8E1000AF1F3 /* Queue.h */,
 				6E2BB8AC27DCB8E1000AF1F3 /* Queue.c */,
