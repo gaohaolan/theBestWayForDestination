@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6E297B9827B6344300ACA855 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E297B9727B6344300ACA855 /* main.c */; };
+		6E2BB8AA27DCAF3B000AF1F3 /* minimumOfTransitsAir.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BB8A927DCAF3B000AF1F3 /* minimumOfTransitsAir.c */; };
+		6E2BB8AD27DCB8E1000AF1F3 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E2BB8AC27DCB8E1000AF1F3 /* Queue.c */; };
 		6E46E17A27CD29B5000F94D2 /* reWrite.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E46E17927CD29B5000F94D2 /* reWrite.c */; };
 		6E46E17D27CDF0F0000F94D2 /* modifyCityName.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E46E17C27CDF0F0000F94D2 /* modifyCityName.c */; };
 		6E46E18027CE0B09000F94D2 /* deleteTrainMap.c in Sources */ = {isa = PBXBuildFile; fileRef = 6E46E17F27CE0B09000F94D2 /* deleteTrainMap.c */; };
@@ -69,6 +71,10 @@
 /* Begin PBXFileReference section */
 		6E297B9427B6344300ACA855 /* theBestWayForDestination */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = theBestWayForDestination; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E297B9727B6344300ACA855 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		6E2BB8A827DCAF3B000AF1F3 /* minimumOfTransitsAir.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minimumOfTransitsAir.h; sourceTree = "<group>"; };
+		6E2BB8A927DCAF3B000AF1F3 /* minimumOfTransitsAir.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = minimumOfTransitsAir.c; sourceTree = "<group>"; };
+		6E2BB8AB27DCB8E1000AF1F3 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		6E2BB8AC27DCB8E1000AF1F3 /* Queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
 		6E46E17827CD29B5000F94D2 /* reWrite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = reWrite.h; sourceTree = "<group>"; };
 		6E46E17927CD29B5000F94D2 /* reWrite.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = reWrite.c; sourceTree = "<group>"; };
 		6E46E17B27CDF0F0000F94D2 /* modifyCityName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modifyCityName.h; sourceTree = "<group>"; };
@@ -249,6 +255,10 @@
 				6EDC9B8127DA5FA10023F267 /* checkCityListair.c */,
 				6EDC9B8327DA62790023F267 /* checkAirMap.h */,
 				6EDC9B8427DA62790023F267 /* checkAirMap.c */,
+				6E2BB8A827DCAF3B000AF1F3 /* minimumOfTransitsAir.h */,
+				6E2BB8A927DCAF3B000AF1F3 /* minimumOfTransitsAir.c */,
+				6E2BB8AB27DCB8E1000AF1F3 /* Queue.h */,
+				6E2BB8AC27DCB8E1000AF1F3 /* Queue.c */,
 			);
 			path = Airplane;
 			sourceTree = "<group>";
@@ -449,6 +459,7 @@
 				6E51FC8727BF5FD60095842D /* checkCityList.c in Sources */,
 				6EE9546727B8E1000041E8BD /* showContents.c in Sources */,
 				6EE9548127BBFCE60041E8BD /* createGraph.c in Sources */,
+				6E2BB8AA27DCAF3B000AF1F3 /* minimumOfTransitsAir.c in Sources */,
 				6E46E17A27CD29B5000F94D2 /* reWrite.c in Sources */,
 				6EDC9B7C27DA21240023F267 /* createGraphair.c in Sources */,
 				6EE9547627BB94810041E8BD /* showAdministratorContents.c in Sources */,
@@ -456,6 +467,7 @@
 				6EDC9B9127DB6DCF0023F267 /* addCityair.c in Sources */,
 				6EE9546A27BAABAD0041E8BD /* displayUsersMenu.c in Sources */,
 				6E5CE2C527D5E15900E7A2D7 /* minimumOfTransits.c in Sources */,
+				6E2BB8AD27DCB8E1000AF1F3 /* Queue.c in Sources */,
 				6EDC9B7927DA01FF0023F267 /* totalTime.c in Sources */,
 				6EDC9B8527DA62790023F267 /* checkAirMap.c in Sources */,
 				6EDC9B8227DA5FA10023F267 /* checkCityListair.c in Sources */,

@@ -9,5 +9,6 @@
 #define checkCityListair_h
 
 #include <stdio.h>
+
 void checkCityListair(void);
 #endif /* checkCityListair_h */
