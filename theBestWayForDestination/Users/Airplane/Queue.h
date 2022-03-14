@@ -25,10 +25,10 @@ typedef struct LinkQueue{
 }LinkQueue;
 
 void InitQueue(LinkQueue* Q);
-void Enqueue(LinkQueue* Q, int data);
-int IsEmpty(LinkQueue* Q);
-void Dequeue(LinkQueue* Q);
-int GetTop(LinkQueue* Q);
+void EnLinkQueue(LinkQueue* Q, int data);
+int QueueEmpty(LinkQueue* Q);
+int DeLinkQueue(LinkQueue* Q);
+int ReadLinkQueue(LinkQueue* Q);
 
 
 #endif /* Queue_h */

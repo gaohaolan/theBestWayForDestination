@@ -21,6 +21,12 @@
 #include "lessFee.h"
 #include "checkCityListair.h"
 #include "checkAirMap.h"
+#include "minimumOfTransitsAir.h"
+#include "lessTimeAir.h"
+#include "lessFeeAir.h"
+
+
+
 
 //显示使用者选单与操作。
 void displayUsersMenu(Graph* g,Graph* gair){
@@ -55,7 +61,7 @@ void displayUsersMenu(Graph* g,Graph* gair){
         }
         else if (strcmp(temp, planetrans)==0)
         {
-            //
+            minimumOfTransitsAir(gair);
         }
         else if (strcmp(temp, checkTheCityList)==0)
         {
@@ -67,7 +73,7 @@ void displayUsersMenu(Graph* g,Graph* gair){
         }
         else if(strcmp(temp, planetime)==0)
         {
-            //
+            lessTimeAir(gair);
         }
         else if (strcmp(temp, trainfee)==0)
         {
@@ -75,7 +81,7 @@ void displayUsersMenu(Graph* g,Graph* gair){
         }
         else if(strcmp(temp, planefee)==0)
         {
-            //
+            lessFeeAir(gair);
         }
         else if(strcmp(temp, checkTheCityListair)==0)
         {

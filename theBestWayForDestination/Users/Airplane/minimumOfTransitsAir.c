@@ -18,7 +18,7 @@ int FirstAdjvex(Graph* gair,int u, int vised[])
         else
             return p->adjvex;
     }
-    return -1;//表示未找到邻接点
+    return 0;//表示未找到邻接点
 }
 
 
@@ -40,7 +40,7 @@ int NextAdjvex(Graph* gair, int u, int v, int vised[])
         else
             return p->adjvex;
     }
-    return -1;          //表示无下一邻接点
+    return 0;          //表示无下一邻接点
 }
 
 
@@ -48,35 +48,64 @@ int NextAdjvex(Graph* gair, int u, int v, int vised[])
 int BFS1(Graph* gair,int u, int vised[],int e,int* flag, int path[])
 {
     int lu=1;
-    LinkQueue* Q = NULL;
-    InitQueue(Q);
+    LinkQueue Q;//=(LinkQueue*)malloc(sizeof(LinkQueue));
+    printf("is it here?\n");
+    InitQueue(&Q);
+    //printf("is it here?\n");
     //先访问再入队
     vised[u] = 1;
     //cout<<u+1<<" ";
-    //printf("%s",gair->arrays[u].data);
-    //printf("-->");
+    printf("%s",gair->arrays[u].data);
+    printf("-->");
     path[0]=u;
-    Enqueue(Q,u);
-    
-    while (!IsEmpty(Q)) {        //队非空
-        u=GetTop(Q);
-        Dequeue(Q);
+    EnLinkQueue(&Q,u);
+//    QNode* t=Q->front->next;
+//    if (t==NULL) {
+//        printf("的确是空的\n");
+//    }
+//    else
+//        printf("非空\n");
+    //printf("%d\n",u);
+    while (!QueueEmpty(&Q)) {        //队非空
+        printf("gogogo\n");
+        u=ReadLinkQueue(&Q);
+        printf("next->%d\n",u);
+        path[lu++]=DeLinkQueue(&Q);
+        
+        printf("ok\n");
         for(int v = FirstAdjvex(gair, u, vised); v>=1; v=NextAdjvex(gair,u,v,vised)) {     //出队元素u 的所有相邻点入队
+            printf("%d\n",v);
             if(!vised[v]){
                 vised[v]=1;
-                path[lu++]=v;
+                printf("%d\n",v);
+                //path[lu++]=v;
                 if (v==e) {
                     //statements;
                     //printf("%s",gair->arrays[v].data);
                     *flag=1;
-                    return lu;
+                    printf("return\n");
+                    return (lu-1);
                 }
-                Enqueue(Q,v);
+//                QNode* t=Q->front->next;
+//                if (t==NULL) {
+//                    printf("的确是空的!\n");
+//                }
+                EnLinkQueue(&Q,v);
+//                QNode* t1=Q->front;
+//                if (t1==NULL) {
+//                    printf("的确是空的\n");
+//                }
+//                while (t!=NULL) {
+//                    printf("：：%d\n",t->data);
+//                    t=t->next;
+//                }
+                printf("in:%d\n",v);
                 //cout<<v+1<<" ";
-                //printf("%s",gair->arrays[v].data);
-                //printf("-->");
+                printf("%s",gair->arrays[v].data);
+                printf("-->");
             }
         }
+        //printf("another loop\n");
     }
     return -1;
 }
@@ -92,7 +121,7 @@ int BFSTraverse1(Graph* gair, int s, int e, int* flag, int path[])
     }
     
     //不一定是连通图
-    
+    printf("in bfs1\n");
     return BFS1(gair,s,vised,e,flag,path)+1;
     
     
@@ -129,22 +158,22 @@ void minimumOfTransitsAir(Graph* gair){
     int s=findadjair(cityStart, gair);
     int e=findadjair(cityEnd, gair);
     int sum=BFSTraverse1(gair, s, e, &flag,path);
-    
+    printf("test\n");
     if (flag==0) {
         printf("\n\n🚫无法到达目的地！暂无线路可以抵达！\n");
-        fputs("🚫无法到达目的地！暂无线路可以抵达！\n", f);
+        //fputs("🚫无法到达目的地！暂无线路可以抵达！\n", f);
     }
     else{
-        for (int i=1; i<sum; i++) {
+        for (int i=2; i<sum; i++) {
             printf("%s",gair->arrays[path[i-1]].data);
-            fputs(gair->arrays[path[i-1]].data, f);
+            //fputs(gair->arrays[path[i-1]].data, f);
             printf("-->");
         }
         printf("%s",gair->arrays[e].data);
         printf("\n");
-        fputs("\n", f);
+        //fputs("\n", f);
     }
-    fputs("\n", f);
+   // fputs("\n", f);
     fclose(f);
     
     printf("\n");
