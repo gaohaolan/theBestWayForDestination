@@ -9,5 +9,7 @@
 #define howManyLines_h
 
 #include <stdio.h>
+
+
 int howManyLines(void);
 #endif /* howManyLines_h */

@@ -20,17 +20,6 @@ int findadj(char vexs[],Graph* g)   //找到城市存放的下标
     return i;
 }
 
-//int isCityRepeat(Graph* g,char vexs[]){   //查看城市是否有重复名称
-//    int f=findadj(vexs, g);
-//    for (int i=f+1; i<=g->numVertexes; i++) {  //为什么+1？
-//        if (strcmp(g->arrays[i].data,vexs)) {
-//            return 1;
-//        }
-//    }
-//    return 0;
-//}
-
-
 int isCityRepeat(Graph* g,char vexs[]){   //城市是否有重复?
     for (int i=1; i<=g->numVertexes; i++) {
         if (!strcmp(g->arrays[i].data,vexs)) {

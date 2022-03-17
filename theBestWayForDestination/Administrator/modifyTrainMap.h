@@ -10,5 +10,7 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
+
 void modifyTrainMap(Graph* g);
 #endif /* modifyTrainMap_h */

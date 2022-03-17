@@ -32,6 +32,7 @@ typedef struct PartLNode
     struct PartLNode* next;
 }PartLNode;
 
+
 void DFSaLine(GraphArrays g,int i,LNode* ln,PartLNode* pp,char nnname[]);
 void reWrite(Graph* g);
 #endif /* reWrite_h */

@@ -10,5 +10,8 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
+
+
 void changePay(Graph* g,char vexs[]);
 #endif /* changePay_h */

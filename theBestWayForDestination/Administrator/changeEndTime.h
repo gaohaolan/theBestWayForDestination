@@ -10,5 +10,8 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
+
+
 void changeEndTime(Graph* g,char vexs[]);
 #endif /* changeEndTime_h */

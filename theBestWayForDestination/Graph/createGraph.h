@@ -46,13 +46,11 @@ typedef struct Graph{  //图存放顶点和边
 }Graph,*GraphArrays;
 
 
+
+
 Graph* createGraph(void);
-
 void printgraph(Graph* g);
-
-
 int isCityRepeat(Graph* g,char vexs[]);
-
 int findadj(char vexs[],Graph* g);
 
 #endif /* createGraph_h */

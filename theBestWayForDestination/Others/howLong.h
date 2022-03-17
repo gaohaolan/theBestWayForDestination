@@ -9,5 +9,7 @@
 #define howLong_h
 
 #include <stdio.h>
+
+
 int howLong(char stime[],char etime[]);
 #endif /* howLong_h */

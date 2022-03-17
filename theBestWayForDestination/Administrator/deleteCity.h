@@ -21,5 +21,7 @@ typedef struct cityTempD{
     struct cityTempD* link;
 }cityTempD;
 
+
+
 void deleteCity(Graph* g);
 #endif /* deleteCity_h */

@@ -10,8 +10,6 @@
 
 #include <stdio.h>
 #include "createGraph.h"
-void deleteTrainMap(Graph* g);
-int isLineRepeat(Graph* g,char vexs[]);
 
 typedef struct tempLineName{
     char tempLN[10];
@@ -22,4 +20,8 @@ typedef struct tempLineNum{
     int tempLM;
     struct tempLineNum* link;
 }tempLineNum;
+
+
+void deleteTrainMap(Graph* g);
+int isLineRepeat(Graph* g,char vexs[]);
 #endif /* deleteTrainMap_h */

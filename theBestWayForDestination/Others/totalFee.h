@@ -10,5 +10,7 @@
 
 #include <stdio.h>
 #include "createGraph.h"
+
+
 int totalFee(char vexs[],Graph* g);
 #endif /* totalFee_h */

@@ -24,6 +24,8 @@ typedef struct LinkQueue{
     QNode* rear;
 }LinkQueue;
 
+
+
 void InitQueue(LinkQueue* Q);
 void EnLinkQueue(LinkQueue* Q, int data);
 int QueueEmpty(LinkQueue* Q);

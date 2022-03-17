@@ -233,8 +233,6 @@ void deleteTrainMap(Graph* g){
     //printgraph(g);
     
 
-
-    //printf("这里没有问题！\n");
     //reWrite最后重写时刻表！
     reWrite(g);
     taskCompleted();

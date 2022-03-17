@@ -169,7 +169,7 @@ void lessTimeAir(Graph* gair){
     fputs(cityStart, f3);
     fputs("到", f3);
     fputs(cityEnd, f3);
-    fputs("的火车耗时最少的路线为：\n", f3);
+    fputs("的航班耗时最少的路线为：\n", f3);
     //重点关注这里！
     
     if (flag==0) {
